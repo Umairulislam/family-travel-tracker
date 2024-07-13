@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New User</title>
+    <link rel="stylesheet" href="./styles/new.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Add a Family Member</h1>
+      </header>
+
+      <section class="form-section">
+        <form action="/new" method="post" class="user-form">
+          <label for="name">What's your name?</label>
+          <input type="text" name="name" id="name" />
+
+          <label for="color">Pick a color:</label>
+          <div class="color-picker">
+            <% const colors = ['red', 'green', 'yellow', 'olive', 'orange',
+            'teal', 'blue', 'violet', 'purple', 'pink', 'crimson', 'limegreen']; %> <%
+            colors.forEach((color) => { %>
+            <input
+              type="radio"
+              name="color"
+              id="<%= color %>"
+              value="<%= color %>"
+            />
+            <label for="<%= color %>"><span class="<%= color %>"></span></label>
+            <% }); %>
+          </div>
+          <button type="submit" class="btn">Add</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

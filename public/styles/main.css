@@ -1,0 +1,173 @@
+/* General Reset and Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #21252b;
+  color: #ffffff;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+/* User Section */
+.user-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.tab-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.user-input {
+  /* display: none; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #555;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.user-label,
+.add-label {
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-label {
+  border-radius: 10px;
+  background: #555;
+}
+.user-label:hover,
+.add-label:hover {
+  opacity: 0.8;
+}
+
+/* Form Section */
+.form-section {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.action-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.action-form input[type="text"],
+.action-form select {
+  flex: 1.5;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.action-form .btn {
+  padding: 10px 20px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.action-form .btn:hover {
+  opacity: 0.8;
+}
+.delete-user-btn {
+  background-color: #db2828;
+}
+.user-dropdown {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  cursor: pointer;
+}
+.user-dropdown option {
+  background: #21252b;
+  color: #ffffff;
+}
+
+/* Map Section */
+.map-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.ag-canvas_svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+footer .total-count {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .tab-view {
+    justify-content: center;
+  }
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .action-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .map-section {
+    padding: 2rem 1rem;
+  }
+  footer .total-count {
+    font-size: 1.25rem;
+  }
+}
